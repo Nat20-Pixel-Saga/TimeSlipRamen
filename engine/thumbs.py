@@ -122,3 +122,111 @@ def thumb_wide(tl, t, words, colors=(CREAM, GOLD)):
     base = shade_top(world(tl, t), 70, 0.7).resize((1280, 720), Image.NEAREST).convert('RGBA')
     base.alpha_composite(big_words(words, colors, scale=7))
     return base.convert('RGB')
+
+
+# ---------------------------------------------------------------- Shorts (1080x1920)
+
+def short_moment(tl, who, windows):
+    """(source time, output time) of the Short's thumbnail frame: the visitor's first line inside
+    the Short, a moment after they start talking (head turned, mouth moving); else 2 s in."""
+    off = 0.0
+    for a, b in windows:
+        for ln in tl.lines:
+            if ln['who'] == who and a <= ln['t0'] < b:
+                t = min(ln['t0'] + 0.7, b - 0.1)
+                return t, off + (t - a)
+        off += b - a
+    a, b = windows[0]
+    return min(a + 2.0, b - 0.1), min(2.0, b - a - 0.1)
+
+
+def wrap_words(text, one_line=11):
+    """Upper-case the hook and break it into one, two or three balanced lines."""
+    words = text.upper().split()
+    full = ' '.join(words)
+    if len(full) <= one_line or len(words) == 1:
+        return [full]
+    best = None
+    for k in range(1, len(words)):
+        a, b = ' '.join(words[:k]), ' '.join(words[k:])
+        score = (max(len(a), len(b)), abs(len(a) - len(b)), len(b) > len(a))
+        if best is None or score < best[0]:
+            best = (score, [a, b])
+    if best[0][0] <= 14 or len(words) < 3:
+        return best[1]
+    best3 = None
+    for i in range(1, len(words) - 1):
+        for j in range(i + 1, len(words)):
+            ls = [' '.join(words[:i]), ' '.join(words[i:j]), ' '.join(words[j:])]
+            score = max(len(x) for x in ls)
+            if best3 is None or score < best3[0]:
+                best3 = (score, ls)
+    return best3[1]
+
+
+def centered_words(lines, colors, scale, width, top, gap=6):
+    """Big bold pixel words, centred, same style as big_words."""
+    im = Image.new('RGBA', (width, 1), (0, 0, 0, 0))
+    rows, y = [], top
+    for s, col in zip(lines, colors):
+        tw = text_w(s) + 1
+        m = Image.new('L', (tw + 6, 21), 0)
+        d = ImageDraw.Draw(m)
+        d.fontmode = '1'
+        d.text((3, 2), s, font=FONT, fill=255)
+        d.text((4, 2), s, font=FONT, fill=255)
+        out = m.filter(ImageFilter.MaxFilter(3))
+        lay = Image.new('RGBA', (m.width + 1, m.height + 1), (0, 0, 0, 0))
+        lay.paste(Image.new('RGBA', m.size, INK + (140,)), (1, 1), out)
+        lay.paste(Image.new('RGBA', m.size, INK + (255,)), (0, 0), out)
+        lay.paste(Image.new('RGBA', m.size, col + (255,)), (0, 0), m)
+        bb = lay.getbbox()
+        lay = lay.crop(bb).resize(((bb[2] - bb[0]) * scale, (bb[3] - bb[1]) * scale), Image.NEAREST)
+        rows.append((lay, y))
+        y += lay.height + gap
+    return rows, y
+
+
+def name_plate(name_jp, name, scale=4):
+    s = f'{name_jp}  {name}'
+    tw = text_w(s)
+    im = Image.new('RGBA', (tw + 10, 20), (20, 18, 34, 235))
+    d = ImageDraw.Draw(im)
+    d.rectangle((0, 0, im.width - 1, im.height - 1), outline=GOLD + (255,))
+    d.fontmode = '1'
+    d.text((5, 1), s, font=FONT, fill=CREAM)
+    return im.resize((im.width * scale, im.height * scale), Image.NEAREST)
+
+
+def thumb_short(tl, who, windows, hook, name_jp, name, cam=None):
+    """A vertical frame from the Short itself at x11: the visitor centred, the hook in big words
+    and the visitor's name in the middle band (y 600-1320), which survives both the 9:16 card and
+    the wider crop some surfaces use. Returns (image, output time of the frame) so the same frame
+    can be picked in the app where custom thumbnails aren't offered yet."""
+    t, to = short_moment(tl, who, windows)
+    x = tl._xof(who, t)
+    if x is None:
+        x = cam if cam is not None else 200
+    base = world(tl, t)
+    x0 = int(min(max(round(x) - 49, 0), 320 - 99))
+    crop = base.crop((x0, 3, x0 + 99, 178))
+    big = crop.resize((99 * 11, 175 * 11), Image.NEAREST)
+    big = big.crop((4, 2, 1084, 1922))
+    a = np.asarray(big).astype(np.float32)
+    for y in range(380, 1180):                                 # shade behind the words
+        k = 0.66 * (1 - abs(y - 780) / 400) ** 0.8
+        a[y] *= 1 - k
+    big = Image.fromarray(a.clip(0, 255).astype(np.uint8)).convert('RGBA')
+    lines = wrap_words(hook)
+    longest = max(len(s) for s in lines)
+    scale = max(6, min(11, 1000 // (longest * 8 + 4)))
+    rows, y_end = centered_words(lines, (CREAM, GOLD, CREAM), scale, 1080, 0)
+    total = y_end
+    y0 = 760 - (total + 24 + 80) // 2
+    for lay, y in rows:
+        big.alpha_composite(lay, ((1080 - lay.width) // 2, y0 + y))
+    plate = name_plate(name_jp, name)
+    if plate.width > 1040:
+        plate = plate.resize((plate.width * 3 // 4, plate.height * 3 // 4), Image.NEAREST)
+    big.alpha_composite(plate, ((1080 - plate.width) // 2, y0 + total + 24))
+    return big.convert('RGB'), to

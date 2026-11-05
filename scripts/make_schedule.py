@@ -18,6 +18,7 @@ from content.cast import CAST  # noqa: E402
 from content.facts import FACTS  # noqa: E402
 from content.words import WORDS  # noqa: E402
 from content.season import load_episode, EP_VISITORS  # noqa: E402
+from engine.thumbs import short_moment  # noqa: E402
 
 DOCS = os.path.join(ROOT, 'docs')
 SEASON_START = dt.date(2026, 11, 16)
@@ -117,10 +118,12 @@ def short_item(sh, date):
         d += ['豆知識'] + facts_block(fids) + ['']
     d += [SH_TAGS]
     sid = f'short{n:02d}'
+    _, frame = short_moment(tl, sh['who'], win)
     return dict(id=sid, kind='short', n=n, ep=sh['ep'], date=date.isoformat(), time=M.SHORT_TIME,
                 release=f'week-{week_of(date.isoformat())}', file=f'timeslip-ramen-{sid}.mp4',
                 title=sh['title'], hook=sh['hook'], duration=ts(dur), visitors=[CAST[sh['who']]['name']],
-                description='\n'.join(d), related=f'ep{sh["ep"]:02d}', playlists=[M.PLAYLISTS[1]['name']])
+                description='\n'.join(d), related=f'ep{sh["ep"]:02d}', playlists=[M.PLAYLISTS[1]['name']],
+                thumb=f'timeslip-ramen-{sid}-thumb.png', thumb_frame=f'{int(frame) // 60}:{frame % 60:04.1f}')
 
 
 SH_TAGS = M.SHORT_TAGS
@@ -163,7 +166,7 @@ def write(items):
                     'duration', 'playlists', 'pinned_comment'])
         for i in items:
             w.writerow([i['date'], i['time'], i['kind'], i['id'], i['release'], i['file'], i['title'],
-                        i.get('title_b', ''), i.get('thumb_a', ''), i.get('thumb_b', ''), i.get('duration', ''),
+                        i.get('title_b', ''), i.get('thumb_a', i.get('thumb', '')), i.get('thumb_b', ''), i.get('duration', ''),
                         ' | '.join(i.get('playlists', [])), i.get('pinned', '')])
     md = [f'# {M.CHANNEL} · {M.SEASON}: upload schedule', '',
           f'All times {M.TZ} (CET). Episodes Mon/Wed/Fri {M.EP_TIME}, Shorts daily {M.SHORT_TIME}, from '
@@ -172,6 +175,10 @@ def write(items):
           '**A/B test** (YouTube Studio > the video > Test & compare): upload with title A and thumbnail A, then '
           'add thumbnail B (and title B, where Studio offers title tests). Let it run until Studio picks a winner, '
           'usually one to two weeks.', '',
+          '**Shorts thumbnails** (1080x1920, words in the middle band so they survive the wider crop some pages '
+          'use): YouTube is rolling custom Shorts thumbnails out to Partner Program channels first, and only in '
+          'Studio on desktop; there is no A/B test for Shorts. Until the option appears, choose the frame listed '
+          'for each Short (it is the same picture).', '',
           '| Date | Time | Item | Title (A) | Release |', '|---|---|---|---|---|']
     for i in items:
         t = i['title'].replace('|', r'\|')
@@ -187,6 +194,9 @@ def write(items):
             md += [f'- Title A: {i["title"]}', f'- Title B: {i["title_b"]}']
         else:
             md += [f'- Title: {i["title"]}']
+        if i.get('thumb'):
+            md += [f'- Thumbnail: `{i["thumb"]}` (Studio on desktop). If Studio doesn\'t offer a custom thumbnail '
+                   f'for Shorts yet, pick the frame at {i["thumb_frame"]} (same picture, with the dialogue box)']
         if i.get('thumb_a'):
             md += [f'- Thumbnails: `{i["thumb_a"]}` (A)' + (f', `{i["thumb_b"]}` (B)' if i.get('thumb_b') else '')]
         if i.get('hook'):

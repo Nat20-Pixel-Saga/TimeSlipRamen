@@ -20,7 +20,8 @@ INTROS = {
 }
 WEEK_INTRO = [
     "Episodes (Mon, Wed, Fri at 17:00 CET) with thumbnails A (`-thumb-A.png`, the visitor and hook words) and "
-    "B (`-thumb-B.png`, the shop, no words) for Test & compare; Shorts every day at 19:00.", "",
+    "B (`-thumb-B.png`, the shop, no words) for Test & compare; Shorts every day at 19:00, each with a vertical "
+    "thumbnail (`-thumb.png`, 1080x1920).", "",
     "Titles A and B, descriptions (chapters, facts and sources), pinned comments and playlists for every upload "
     "are in [`docs/upload-schedule.md`](https://github.com/" + os.environ.get('GITHUB_REPOSITORY', 'Nat20-Pixel-Saga/TimeSlipRamen')
     + "/blob/main/docs/upload-schedule.md)."]

@@ -5,6 +5,7 @@ plan job needs nothing but Python).
     python3 scripts/plan_jobs.py channel-kit       # the trailer (logo, banner, watermark are committed)
     python3 scripts/plan_jobs.py all
     python3 scripts/plan_jobs.py ep03 short12 trailer
+    python3 scripts/plan_jobs.py short-thumbs      # only the 28 Shorts thumbnails, one job per week
 """
 import json
 import os
@@ -22,7 +23,11 @@ def expand(req):
     items = all_items()
     want = []
     for tok in req.split():
-        if tok == 'all':
+        if tok == 'short-thumbs':
+            want += [(f'thumbs-{w}', w) for w in ('week-1', 'week-2', 'week-3', 'week-4')]
+        elif tok.startswith('thumbs-week-'):
+            want += [(tok, tok[len('thumbs-'):])]
+        elif tok == 'all':
             want += items
         elif tok.startswith('week-') or tok == 'channel-kit':
             want += [i for i in items if i[1] == tok]

@@ -2,13 +2,14 @@ name: Render season content
 
 # Actions tab > "Render season content" > Run workflow.
 #   items: week-1 | week-2 | week-3 | week-4 | channel-kit | all | or a list like "ep03 short12 trailer"
+#          | short-thumbs: only the Shorts thumbnails (one job per week; also thumbs-week-2 etc.)
 # Each item renders in its own job and is attached to its release (week-1 ... week-4, channel-kit).
 # Release titles and notes come from docs/upload-schedule.json (scripts/make_schedule.py).
 on:
   workflow_dispatch:
     inputs:
       items:
-        description: "week-1 … week-4, channel-kit, all, or items like 'ep03 short12 trailer'"
+        description: "week-1 … week-4, channel-kit, all, short-thumbs, or items like 'ep03 short12 trailer'"
         required: true
         default: week-1
 

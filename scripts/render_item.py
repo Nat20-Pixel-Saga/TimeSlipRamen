@@ -55,7 +55,9 @@ def main():
     a = ap.parse_args()
     os.makedirs(a.out, exist_ok=True)
     it = a.item
-    if it.startswith('ep'):
+    if it.startswith('thumbs-'):
+        print('thumbnails only: scripts/make_thumbs.py renders them')
+    elif it.startswith('ep'):
         print(episode(int(it[2:]), a.out, a.workers, a.limit))
     elif it.startswith('short'):
         print(short(int(it[5:]), a.out, a.workers))

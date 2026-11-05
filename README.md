@@ -18,7 +18,7 @@ characters, the on-screen fact and word cards, and the original lo-fi music.
 ## Rendering on GitHub
 
 Actions > **Render season content** > Run workflow, with `items` set to `week-1` (or `week-2` … `week-4`,
-`channel-kit`, `all`, or a list such as `ep03 short12 trailer`). Each item renders in its own job (an episode
+`channel-kit`, `all`, `short-thumbs` for just the Shorts thumbnails, or a list such as `ep03 short12 trailer`). Each item renders in its own job (an episode
 takes about 10 minutes, a Short about 3) and is attached to its release with its thumbnails.
 
 ## Requirements
@@ -32,7 +32,7 @@ Python 3.10+, `ffmpeg` on the PATH, GNU Unifont (`sudo apt-get install fonts-uni
 python3 scripts/render_item.py ep03 --out out          # an episode (1920x1080, 30 fps)
 python3 scripts/render_item.py short12 --out out       # a Short (1080x1920, 30 fps)
 python3 scripts/render_item.py trailer --out out       # the channel trailer
-python3 scripts/make_thumbs.py --out out ep03          # thumbnails A and B (or: all, trailer)
+python3 scripts/make_thumbs.py --out out ep03          # thumbnails A and B (or: short05, thumbs-week-2, trailer, all)
 python3 scripts/make_kit.py                            # logo, banner and watermark into channel/
 python3 scripts/make_schedule.py                       # regenerate docs/upload-schedule.*
 ```

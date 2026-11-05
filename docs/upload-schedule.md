@@ -4,6 +4,8 @@ All times Europe/Berlin (CET). Episodes Mon/Wed/Fri 17:00, Shorts daily 19:00, f
 
 **A/B test** (YouTube Studio > the video > Test & compare): upload with title A and thumbnail A, then add thumbnail B (and title B, where Studio offers title tests). Let it run until Studio picks a winner, usually one to two weeks.
 
+**Shorts thumbnails** (1080x1920, words in the middle band so they survive the wider crop some pages use): YouTube is rolling custom Shorts thumbnails out to Partner Program channels first, and only in Studio on desktop; there is no A/B test for Shorts. Until the option appears, choose the frame listed for each Short (it is the same picture).
+
 | Date | Time | Item | Title (A) | Release |
 |---|---|---|---|---|
 | Sat 14 Nov | 17:00 | trailer | Timeslip Ramen: a pixel ramen shop where history walks in out of the rain | channel-kit |
@@ -137,6 +139,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short01.mp4` (release `week-1`), 0:41
 - Title: A haiku poet from 1689 walks into a ramen shop
+- Thumbnail: `timeslip-ramen-short01-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "200 years too early"; link the related video: ep01
 - Playlists: Shorts · one visitor a day
 
@@ -156,6 +159,7 @@ From Episode 1, "Bashō walks into a ramen shop 200 years too early". The full e
 
 - File: `timeslip-ramen-short02.mp4` (release `week-1`), 0:49
 - Title: Never bow to a kappa
+- Thumbnail: `timeslip-ramen-short02-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:02.9 (same picture, with the dialogue box)
 - On-screen hook: "Never bow to a kappa"; link the related video: ep01
 - Playlists: Shorts · one visitor a day
 
@@ -219,6 +223,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short03.mp4` (release `week-1`), 0:45
 - Title: Miyamoto Musashi is always late. On purpose.
+- Thumbnail: `timeslip-ramen-short03-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:04.7 (same picture, with the dialogue box)
 - On-screen hook: "Late. On purpose."; link the related video: ep02
 - Playlists: Shorts · one visitor a day
 
@@ -238,6 +243,7 @@ From Episode 2, "The samurai who was late on purpose". The full episode is on th
 
 - File: `timeslip-ramen-short04.mp4` (release `week-1`), 0:45
 - Title: The tanuki who turned into a tea kettle
+- Thumbnail: `timeslip-ramen-short04-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:02.9 (same picture, with the dialogue box)
 - On-screen hook: "Totally normal human"; link the related video: ep02
 - Playlists: Shorts · one visitor a day
 
@@ -300,6 +306,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short05.mp4` (release `week-1`), 0:52
 - Title: Hokusai moved 93 times. His secret: never clean
+- Thumbnail: `timeslip-ramen-short05-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:03.9 (same picture, with the dialogue box)
 - On-screen hook: "93 house moves"; link the related video: ep03
 - Playlists: Shorts · one visitor a day
 
@@ -320,6 +327,7 @@ From Episode 3, "Hokusai moved house 93 times. Then he came for ramen". The full
 
 - File: `timeslip-ramen-short06.mp4` (release `week-1`), 0:45
 - Title: Grandpa's umbrella just turned 100
+- Thumbnail: `timeslip-ramen-short06-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:37.1 (same picture, with the dialogue box)
 - On-screen hook: "The umbrella woke up"; link the related video: ep03
 - Playlists: Shorts · one visitor a day
 
@@ -338,6 +346,7 @@ From Episode 3, "Hokusai moved house 93 times. Then he came for ramen". The full
 
 - File: `timeslip-ramen-short07.mp4` (release `week-1`), 0:49
 - Title: A table for one... inch?
+- Thumbnail: `timeslip-ramen-short07-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:03.9 (same picture, with the dialogue box)
 - On-screen hook: "Table for one inch"; link the related video: ep03
 - Playlists: Shorts · one visitor a day
 
@@ -403,6 +412,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short08.mp4` (release `week-2`), 0:52
 - Title: Was Mito Kōmon Japan's first ramen eater?
+- Thumbnail: `timeslip-ramen-short08-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "Japan's first ramen?"; link the related video: ep04
 - Playlists: Shorts · one visitor a day
 
@@ -424,6 +434,7 @@ From Episode 4, "Who ate Japan's first ramen?". The full episode is on the chann
 
 - File: `timeslip-ramen-short09.mp4` (release `week-2`), 0:50
 - Title: The man who sold eel with a slogan
+- Thumbnail: `timeslip-ramen-short09-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "Business slow?"; link the related video: ep04
 - Playlists: Shorts · one visitor a day
 
@@ -487,6 +498,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short10.mp4` (release `week-2`), 0:48
 - Title: A taxi driver meets Hachikō
+- Thumbnail: `timeslip-ramen-short10-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:02.0 (same picture, with the dialogue box)
 - On-screen hook: "Who's a good boy?"; link the related video: ep05
 - Playlists: Shorts · one visitor a day
 
@@ -507,6 +519,7 @@ From Episode 5, "Hachikō came in from the rain". The full episode is on the cha
 
 - File: `timeslip-ramen-short11.mp4` (release `week-2`), 0:56
 - Title: Don't open the box
+- Thumbnail: `timeslip-ramen-short11-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "DON'T open the box"; link the related video: ep05
 - Playlists: Shorts · one visitor a day
 
@@ -572,6 +585,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short12.mp4` (release `week-2`), 0:37
 - Title: The Moon Princess ordered the impossible
+- Thumbnail: `timeslip-ramen-short12-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "An impossible order"; link the related video: ep06
 - Playlists: Shorts · one visitor a day
 
@@ -590,6 +604,7 @@ From Episode 6, "The thunder god wants your belly button". The full episode is o
 
 - File: `timeslip-ramen-short13.mp4` (release `week-2`), 0:29
 - Title: Cover your belly button!
+- Thumbnail: `timeslip-ramen-short13-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "Cover your belly button"; link the related video: ep06
 - Playlists: Shorts · one visitor a day
 
@@ -608,6 +623,7 @@ From Episode 6, "The thunder god wants your belly button". The full episode is o
 
 - File: `timeslip-ramen-short14.mp4` (release `week-2`), 0:29
 - Title: Only some people can see her
+- Thumbnail: `timeslip-ramen-short14-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:21.5 (same picture, with the dialogue box)
 - On-screen hook: "Who can see her?"; link the related video: ep06
 - Playlists: Shorts · one visitor a day
 
@@ -664,6 +680,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short15.mp4` (release `week-3`), 0:45
 - Title: A fox asks Abe no Seimei how to turn human
+- Thumbnail: `timeslip-ramen-short15-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:05.0 (same picture, with the dialogue box)
 - On-screen hook: "His mother was a fox"; link the related video: ep07
 - Playlists: Shorts · one visitor a day
 
@@ -682,6 +699,7 @@ From Episode 7, "Japan's greatest wizard. His mother was a fox.". The full episo
 
 - File: `timeslip-ramen-short16.mp4` (release `week-3`), 0:40
 - Title: He started at 55 and walked 35,000 km
+- Thumbnail: `timeslip-ramen-short16-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "Started at 55"; link the related video: ep07
 - Playlists: Shorts · one visitor a day
 
@@ -741,6 +759,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short17.mp4` (release `week-3`), 0:31
 - Title: Murasaki Shikibu vs Sei Shōnagon
+- Thumbnail: `timeslip-ramen-short17-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:11.8 (same picture, with the dialogue box)
 - On-screen hook: "Rivals since 1000 AD"; link the related video: ep08
 - Playlists: Shorts · one visitor a day
 
@@ -759,6 +778,7 @@ From Episode 8, "Japan's oldest rivalry, two stools apart". The full episode is 
 
 - File: `timeslip-ramen-short18.mp4` (release `week-3`), 0:24
 - Title: Two famous writers, opposite essay advice
+- Thumbnail: `timeslip-ramen-short18-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:05.6 (same picture, with the dialogue box)
 - On-screen hook: "Need essay advice?"; link the related video: ep08
 - Playlists: Shorts · one visitor a day
 
@@ -817,6 +837,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short19.mp4` (release `week-3`), 0:42
 - Title: He's on the 10,000 yen note (and didn't know)
+- Thumbnail: `timeslip-ramen-short19-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:07.0 (same picture, with the dialogue box)
 - On-screen hook: "Is that... me?"; link the related video: ep09
 - Playlists: Shorts · one visitor a day
 
@@ -838,6 +859,7 @@ From Episode 9, "The people on your money came in for ramen". The full episode i
 
 - File: `timeslip-ramen-short20.mp4` (release `week-3`), 0:38
 - Title: She crossed the ocean to study. Age six.
+- Thumbnail: `timeslip-ramen-short20-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "Is there a 5,000?"; link the related video: ep09
 - Playlists: Shorts · one visitor a day
 
@@ -856,6 +878,7 @@ From Episode 9, "The people on your money came in for ramen". The full episode i
 
 - File: `timeslip-ramen-short21.mp4` (release `week-3`), 0:26
 - Title: The 1,000-yen doctor inspected my kitchen
+- Thumbnail: `timeslip-ramen-short21-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "And the thousand?"; link the related video: ep09
 - Playlists: Shorts · one visitor a day
 
@@ -921,6 +944,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short22.mp4` (release `week-4`), 0:49
 - Title: It was snowing. She asked for something colder
+- Thumbnail: `timeslip-ramen-short22-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "Something cold, please"; link the related video: ep10
 - Playlists: Shorts · one visitor a day
 
@@ -940,6 +964,7 @@ From Episode 10, "The Snow Woman wants it colder". The full episode is on the ch
 
 - File: `timeslip-ramen-short23.mp4` (release `week-4`), 0:38
 - Title: The god students pray to before exams
+- Thumbnail: `timeslip-ramen-short23-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:06.1 (same picture, with the dialogue box)
 - On-screen hook: "The god of exams"; link the related video: ep10
 - Playlists: Shorts · one visitor a day
 
@@ -997,6 +1022,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short24.mp4` (release `week-4`), 0:33
 - Title: A baku ate her exam nightmare. Crunchy.
+- Thumbnail: `timeslip-ramen-short24-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:22.2 (same picture, with the dialogue box)
 - On-screen hook: "It eats nightmares"; link the related video: ep11
 - Playlists: Shorts · one visitor a day
 
@@ -1015,6 +1041,7 @@ From Episode 11, "It ate her nightmare". The full episode is on the channel.
 
 - File: `timeslip-ramen-short25.mp4` (release `week-4`), 0:36
 - Title: Hattori Hanzō is NOT a ninja
+- Thumbnail: `timeslip-ramen-short25-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "NOT a ninja"; link the related video: ep11
 - Playlists: Shorts · one visitor a day
 
@@ -1081,6 +1108,7 @@ Music: original, generated for the channel. Facts checked November 2026; correct
 
 - File: `timeslip-ramen-short26.mp4` (release `week-4`), 0:42
 - Title: A samurai orders 47 bowls of ramen to go
+- Thumbnail: `timeslip-ramen-short26-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "47 bowls. To go."; link the related video: ep12
 - Playlists: Shorts · one visitor a day
 
@@ -1099,6 +1127,7 @@ From Episode 12, "Forty-seven bowls to go (season finale)". The full episode is 
 
 - File: `timeslip-ramen-short27.mp4` (release `week-4`), 0:44
 - Title: The fox turned 100 tonight
+- Thumbnail: `timeslip-ramen-short27-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:02.9 (same picture, with the dialogue box)
 - On-screen hook: "Kon turns 100"; link the related video: ep12
 - Playlists: Shorts · one visitor a day
 
@@ -1117,6 +1146,7 @@ From Episode 12, "Forty-seven bowls to go (season finale)". The full episode is 
 
 - File: `timeslip-ramen-short28.mp4` (release `week-4`), 0:27
 - Title: Kabuki was started by a woman
+- Thumbnail: `timeslip-ramen-short28-thumb.png` (Studio on desktop). If Studio doesn't offer a custom thumbnail for Shorts yet, pick the frame at 0:00.7 (same picture, with the dialogue box)
 - On-screen hook: "She started kabuki"; link the related video: ep12
 - Playlists: Shorts · one visitor a day
 

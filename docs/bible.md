@@ -51,6 +51,7 @@ Kon's countdown matches the calendar: every "N days" he says is true on the day 
 - **Shorts**: 24-56 seconds, 1080×1920, one visitor each, cut from that visitor's episode. They start on a line
   (never a fade), show a hook for the first 2.6 seconds, follow whoever is talking, and loop.
 - **Thumbnails**: A = the visitor in the doorway with two lines of hook words; B = the whole shop, no words.
+  Shorts get a vertical one (1080×1920): a frame from the Short with the hook and the visitor's name in the middle band.
 - **Music**: four original tracks composed in code (see README).
 
 ## Ideas for Season 2
