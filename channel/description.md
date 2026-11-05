@@ -11,7 +11,7 @@
 
 ## Channel description
 
-Paste into Studio > Customisation > Basic info > Description (about 850 characters, under YouTube's 1,000):
+Paste into Studio > Customisation > Basic info > Description (about 750 characters, under YouTube's 1,000):
 
 ```
 A tiny ramen shop on a rainy street corner, whose door opens onto any century.
