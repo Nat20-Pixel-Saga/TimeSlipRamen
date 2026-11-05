@@ -1,0 +1,8 @@
+out/
+*.mp4
+*.wav
+*.m4a
+*.flv
+*.f32
+__pycache__/
+music/

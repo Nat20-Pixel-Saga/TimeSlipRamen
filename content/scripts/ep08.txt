@@ -1,0 +1,84 @@
+# Episode 8 · Two Writers, One Counter
+# Murasaki Shikibu and Sei Shōnagon end up two stools apart. Mika needs essay advice;
+# Kon tries a court disguise.
+@number 8
+@title Two Writers, One Counter
+@weather rain
+@music paper_lantern snow_noren
+@present gen:6 kon:2 mika:1
+@kasa
+@zashiki
+@teaser lists_hook 10
+
+> prop notebook seat=1 dx=-12
+> title
+> cook 3 &
+> wait 6
+> chapter Opening
+mika: I have to write an essay about a book I haven't read. A thousand years old. Very long.
+kon>mika: How long?
+mika>kon: Fifty-four chapters.
+gen: That's a lot of chapters.
+> serve kon kitsune &
+> wait 3
+> chapter Murasaki Shikibu
+> cho eye=wide look=-2,1
+> enter murasaki 3 from=heian cap="Heian-kyō · about 1008" speed=28
+haru: Irasshaimase!
+murasaki: Good evening. Somewhere quiet to write, please.
+> serve murasaki shoyu
+> card genji
+mika: ...Fifty-four chapters. You're Murasaki Shikibu.
+murasaki>mika: I am. Have you read it?
+mika>murasaki: I'm going to. Starting... soon.
+> wait 1.5
+> chapter Sei Shōnagon
+> cho eye=wide look=-2,1
+> enter sei 5 from=heian speed=30
+haru: Irasshaimase!
+> mark lists_hook
+> short 17 start
+sei: Things that are delightful: the steam from a bowl on a rainy night.
+sei: Things that are annoying: people who write very, very long stories.
+> look murasaki right 4 &
+murasaki: Some people write lists because they can't finish a story.
+> look sei left 4 &
+sei: Some people write stories because they can't stop.
+> card rivals
+> short 17 end
+haru: ...Shoyu ramen. For both of you. Same bowl. Same time.
+> serve sei shoyu
+> card pillow_book
+> short 18 start
+mika>sei: Could I ask you both something? I have to write an essay.
+sei>mika: Make a list. Things you love, things you hate. Then you're done.
+murasaki>mika: Find one person. Follow them for a long time. Then you're never done.
+mika: ...That's the opposite advice.
+sei: Yes.
+murasaki: Yes.
+> short 18 end
+kon: Watch this. A lady of the court.
+> transform kon heian_fail 5
+sei: Things that are unconvincing: a fox in a court robe.
+murasaki: The ears are a bold choice.
+> wait 3
+> eat murasaki 4 1 &
+> eat sei 4 1
+haru: Will you both sign the wall?
+> sign murasaki
+> sign sei
+sei: Mine is better.
+murasaki: Mine is longer.
+> leave murasaki to=heian
+> leave sei to=heian
+> finish murasaki
+> finish sei
+> wait 1.5
+> chapter Closing
+mika: They didn't even say goodbye to each other.
+haru: They left together, though.
+kon: Nine days.
+> wait 1
+haru: Same time next rain.
+> cho eye=wink
+> end Next time: three people step out of your wallet.

@@ -1,0 +1,89 @@
+# Episode 7 · The Fox's Son
+# Abe no Seimei, whose mother was a fox, gives Kon advice; Inō Tadataka measures the shop
+# in footsteps, and Gen-san decides he isn't too old to start something.
+@number 7
+@title The Fox's Son
+@weather rain
+@music last_bowl snow_noren
+@present gen:6 kon:2 mika:1
+@kasa
+@zashiki
+@teaser seimei_hook 10
+
+> prop notebook seat=1 dx=-12
+> title
+> cook 3 &
+> wait 6
+> chapter Opening
+kon: Eleven days.
+> transform kon human_fail 4
+mika>kon: Still ears.
+kon: Still ears. [+0.4]
+gen>kon: You'll get there. I believed in a thunder god last week. Anything's possible.
+> serve kon kitsune &
+> wait 3
+> chapter Abe no Seimei
+> cho eye=wide look=-2,1
+> enter seimei 3 from=heian cap="Heian-kyō · about 1000" speed=34
+haru: Irasshaimase!
+> mark seimei_hook
+> short 15 start
+kon>seimei: You're... Abe no Seimei. Your mother was a fox!
+seimei>kon: So they say. You have her ears.
+> card seimei
+kon>seimei: I'm turning a hundred in eleven days, and I still can't turn human.
+seimei>kon: Why would you want to?
+kon>seimei: ...Isn't that what a good fox does?
+seimei>kon: My mother turned human for years. In the end, she still had to go back to the forest.
+seimei>kon: A fox's tail doesn't come from pretending. It comes from being a good fox.
+> short 15 end
+> serve seimei shoyu
+> eat seimei 4 2
+kon: ...What's a good fox?
+seimei: You will know it when you've been one.
+haru: Would you sign the wall?
+> sign seimei
+seimei: A star. It keeps away bad things.
+> leave seimei to=heian
+> finish seimei
+> clear seimei
+> wait 1.5
+> chapter Inō Tadataka
+> cho eye=wide look=-2,1
+> enter ino 5 from=coast cap="The coast of Japan · 1800" speed=30
+> short 16 start
+ino: ...four thousand eight hundred and twelve, four thousand eight hundred and thirteen.
+haru: Irasshaimase?
+ino: Twenty-one paces from the door to this stool. Lovely shop. Wonderful measurements.
+gen>ino: You're counting your steps?
+ino>gen: I'm mapping Japan. The whole coast.
+gen>ino: At your age?
+ino>gen: I started at fifty-five.
+> card ino
+> short 16 end
+> serve ino shoyu
+gen>ino: I drove a taxi for forty-two years. I know every street in Tokyo.
+ino>gen: Then you are a mapmaker too.
+gen: ...I'm seventy-two. Too old to start anything.
+ino>gen: Nonsense. What would you start?
+gen: ...Haru. Could you teach me how to make broth?
+haru>gen: You can start by washing bowls.
+gen>haru: Deal.
+> eat ino 4 2
+haru: Would you sign the wall?
+> sign ino
+> leave ino to=coast
+> finish ino
+> wait 1.5
+> chapter Closing
+> prop cards seat=1 dx=-13
+mika: I've started a new notebook. "People, not dates."
+kon>mika: Who's in it?
+mika>kon: Everyone who's sat on that stool.
+> look zashiki right 3 &
+zashiki: Me too?
+mika: You too.
+> wait 1
+haru: Same time next rain.
+> cho eye=wink
+> end Next time: two great writers of the Heian court, | at the same counter, at the same time.

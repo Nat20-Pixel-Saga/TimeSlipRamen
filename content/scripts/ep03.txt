@@ -1,0 +1,123 @@
+# Episode 3 · The Painter Who Moved 93 Times
+# Hokusai paints a wave; grandpa's umbrella turns 100 and wakes up; Issun-bōshi rows in.
+@number 3
+@title The Painter Who Moved 93 Times
+@weather rain
+@music last_bowl night_market
+@present gen:6 kon:2 mika:1
+@kasa
+@teaser wave_hook 10
+
+> set gen paper true
+> prop cards seat=1 dx=-13
+> title
+> cook 3 &
+> wait 6
+> chapter Opening
+mika: Hokusai, Hiroshige, Utamaro... why did every artist have four names?
+kon>mika: Why does every student have four highlighters?
+mika>kon: That's different. Highlighters are organised.
+> serve kon kitsune &
+> wait 4
+> chapter Hokusai
+> cho eye=wide look=-2,1
+> enter hokusai 4 from=edo_town cap="Edo · 1830s" speed=40
+haru: Irasshaimase!
+hokusai: Is there a room here? I just moved out. Again.
+haru: It's a ramen shop.
+hokusai: I can sleep under the counter. I've slept under worse.
+> short 5 start
+mika>hokusai: How many times have you moved?
+hokusai>mika: This year, or ever?
+mika>hokusai: Ever.
+hokusai: ...Ninety-three. [+0.5]
+> card hokusai_moves
+hokusai: The trick is never to clean. When it gets too dirty, you move.
+> short 5 end
+haru: Please don't move in here.
+> serve hokusai shoyu
+hokusai: Itadakimasu. ...May I borrow some paper?
+> prop paper seat=4 dx=-4 draw=5
+> mark wave_hook
+> wait 3
+> short 5 start
+mika: Wait. That wave. That's the wave on my pencil case!
+hokusai>mika: Your pencil what?
+> card great_wave
+hokusai: Not bad, for a man of seventy. By a hundred and ten, every dot will be alive.
+> short 5 end
+> slurp hokusai
+haru: Sign the wall?
+> sign hokusai
+hokusai: I signed it "the old man mad about painting". It's my name this week.
+> unprop paper
+> leave hokusai to=edo_town
+> finish hokusai
+> clear hokusai
+> wait 1.5
+> chapter The umbrella
+> sfx pop
+> set kasa eye open 1e9
+> short 6 start
+> wait 1.2
+gen: ...Did that umbrella just look at me?
+> set kasa tongue 8 1e9
+mika: Haru. Your umbrella has a tongue.
+haru: That's my grandfather's umbrella.
+kon>haru: How old is it?
+haru: About a hundred years. ...Oh. Today, actually.
+> card tsukumogami
+> move kasa 5
+kasa: Bero.
+> look gen left 4 &
+gen>kasa: ...That's a very good remote-controlled umbrella.
+kasa>gen: Bero bero.
+> short 6 end
+> cho tongue=1 eye=open look=2,1
+> wait 1.5
+> cho tongue=0
+kon: Chō likes it.
+haru: Of course she does. They're the same age.
+haru: Would you like to sign the wall?
+> sign kasa
+mika: It signed with its tongue.
+> move kasa x:65
+> sleep kasa
+> wait 1.5
+> chapter Issun-bōshi
+> cho eye=wide look=-2,2
+> enter issun counter:200 from=river cap="The river to the capital"
+> short 7 start
+haru: Irasshaimase! ...Where are you?
+issun: Down here! ...Up here! Good evening!
+kon>issun: A table for one... inch?
+issun: One noodle, please.
+haru: One noodle.
+issun: A long one. I'm very hungry.
+> short 7 end
+> serve x:214 shoyu
+issun: I will fight it!
+> short 7 start
+> card issun
+mika>issun: You're Issun-bōshi! The bowl boat! The needle sword!
+issun>mika: You've heard of me? I've only just left home!
+kon>issun: How does the story end?
+issun>kon: End? I'm on my way to the capital to become a samurai. Is it good? Do I win?
+haru: ...No spoilers.
+> short 7 end
+> eat issun 4 1
+haru: Will you sign the wall?
+issun: A small board, please.
+> sign issun
+> leave issun to=river
+> finish x:214
+> clear issun
+> wait 1.5
+> chapter Closing
+gen: That's a lot of cosplay for one week.
+kon>gen: Twenty-one days, Gen-san. Twenty-one days and I'm a hundred.
+gen>kon: Congratulations. I'm seventy-two and nobody gives me a tail.
+> wait 1
+haru: Same time next rain.
+> cho eye=wink
+> end Next time: the lord who says he ate Japan's first ramen, | and an inventor with a slogan for everything.

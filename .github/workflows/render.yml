@@ -1,0 +1,75 @@
+name: Render season content
+
+# Actions tab > "Render season content" > Run workflow.
+#   items: week-1 | week-2 | week-3 | week-4 | channel-kit | all | or a list like "ep03 short12 trailer"
+# Each item renders in its own job and is attached to its release (week-1 ... week-4, channel-kit).
+# Release titles and notes come from docs/upload-schedule.json (scripts/make_schedule.py).
+on:
+  workflow_dispatch:
+    inputs:
+      items:
+        description: "week-1 … week-4, channel-kit, all, or items like 'ep03 short12 trailer'"
+        required: true
+        default: week-1
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - id: plan
+        run: echo "matrix=$(python3 scripts/plan_jobs.py ${{ inputs.items }})" >> "$GITHUB_OUTPUT"
+      - name: Create releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for tag in $(python3 scripts/plan_jobs.py ${{ inputs.items }} | python3 -c "import json,sys; print(' '.join(sorted({i['release'] for i in json.load(sys.stdin)['include']})))"); do
+            python3 scripts/release_notes.py "$tag" > notes.md
+            if gh release view "$tag" >/dev/null 2>&1; then
+              gh release edit "$tag" --notes-file notes.md
+            else
+              gh release create "$tag" --title "$(python3 scripts/release_notes.py --title "$tag")" --notes-file notes.md --target "$GITHUB_SHA"
+            fi
+            if [ "$tag" = "channel-kit" ]; then
+              gh release upload "$tag" channel/logo_800.png channel/banner_2560x1440.png channel/watermark_150.png channel/description.md --clobber
+            fi
+          done
+
+  render:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 16
+      matrix: ${{ fromJson(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        run: |
+          for k in 1 2 3; do
+            timeout 300 sudo apt-get -o Acquire::Retries=3 update -y -q && timeout 300 sudo apt-get install -y -q ffmpeg fonts-unifont && break
+            echo "apt-get stalled (try $k), retrying"; sleep 10
+          done
+          command -v ffmpeg
+          ls /usr/share/fonts/opentype/unifont/unifont_jp.otf
+          pip install -r requirements.txt
+      - name: Render ${{ matrix.item }}
+        run: |
+          python3 scripts/render_item.py "${{ matrix.item }}" --out out --workers $(nproc)
+          python3 scripts/make_thumbs.py --out out "${{ matrix.item }}"
+      - name: Attach to ${{ matrix.release }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ matrix.release }}" $(ls out/*.mp4 out/*.png 2>/dev/null) --clobber

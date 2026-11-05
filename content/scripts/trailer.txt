@@ -1,0 +1,56 @@
+# Trailer · Timeslip Ramen (channel trailer, Sat 14 Nov 2026)
+# A quick tour of who might walk in: one line each, then the title and the schedule.
+@number 0
+@title Open to Every Century
+@subtitle Season 1 · from Monday 16 November
+@weather rain
+@music last_bowl
+@present gen:6 kon:2 mika:1
+@kasa
+@endhead SEASON 1 · RAINY NIGHTS
+
+> cook 3 &
+> wait 2.5
+haru: Irasshaimase! [w:irasshaimase]
+> wait 0.6
+> establish edo_road "Edo · 1689" 1.8
+> appear basho 4
+basho: Is this a soba house?
+haru: It's a ramen shop.
+> vanish basho
+> establish river "A river, long ago" 1.5
+> appear kappa 3
+kappa: Cucumber.
+> vanish kappa
+> establish storm "Above the storm" 1.5
+> appear raijin 4
+> flash
+raijin: Something hot!
+kon: Belly buttons!
+> vanish raijin
+> establish snow_mtn "A mountain pass, in a blizzard" 1.5
+> weather snow
+> appear yuki 3
+yuki: Colder.
+> vanish yuki
+> weather rain
+> establish meiji "Tokyo · Meiji era" 1.5
+> appear shibusawa 5
+> prop paper seat=6 dx=-14 dur=3.5
+shibusawa: ...Is that me?
+> vanish shibusawa
+> establish shibuya "Shibuya · 1930s" 1.5
+> appear hachiko floor:200
+> sfx bark
+> wait 1.5
+> vanish hachiko
+> wait 0.6
+> title 6
+> wait 6.5
+gen: It's cosplay.
+kon>gen: It's never cosplay.
+mika: Who's next?
+> look haru right 2 &
+> wait 1.5
+> cho eye=wink
+> end New episodes from Monday 16 November. | Twelve rainy nights, twenty-eight visitors, one wall to sign. | Pull up a stool.

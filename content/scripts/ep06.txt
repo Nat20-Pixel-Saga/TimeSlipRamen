@@ -1,0 +1,113 @@
+# Episode 6 · Not Cosplay
+# Kaguya-hime orders the impossible; Raijin storms in and Gen-san finally believes;
+# a little house spirit is noticed by everyone except Gen... until now.
+@number 6
+@title Not Cosplay
+@weather rain
+@music snow_noren paper_lantern
+@present gen:6 kon:2 mika:1
+@kasa
+@teaser thunder_hook 10
+
+> set gen paper true
+> prop notebook seat=1 dx=-12
+> title
+> cook 3 &
+> wait 6
+> chapter Opening
+mika: I asked my teacher where Bashō stayed in Edo. She asked why I suddenly care.
+kon>mika: What did you tell her?
+mika>kon: That I met him. She gave me extra homework.
+> serve kon kitsune &
+> wait 3
+> chapter Kaguya-hime
+> cho eye=wide look=-2,1
+> enter kaguya 4 from=bamboo cap="A bamboo grove, long ago" speed=30
+> light 220 100 30 0.5,0.5,0.4 0.5
+haru: Irasshaimase!
+> short 12 start
+kaguya: I would like a bowl of noodles that is never empty.
+haru: ...That's called a refill.
+kaguya: And a moon I can eat.
+> serve kaguya tsukimi
+haru: Tsukimi ramen. The egg is the moon. [w:tsukimi]
+kaguya: ...You are the first who has ever brought me what I asked for.
+> card kaguya
+> short 12 end
+> eat kaguya 4 2
+kaguya: In return, I have a gift. An elixir. Whoever drinks it will never die.
+haru: Then I'd be washing bowls forever. Keep it.
+> card fuji_elixir
+kaguya: The Moon is calling me. Thank you, cook.
+haru: Sign the wall first?
+> sign kaguya
+> leave kaguya to=bamboo
+> finish kaguya
+> unlight
+> wait 1.5
+> chapter The storm
+> appear zashiki x:86
+> weather storm
+> flash
+> wait 1.5
+mika: Haru... whose kid is that?
+haru: What kid?
+kon: Oh, her. She came in with the storm.
+gen: What kid? There's no kid.
+> look zashiki right 3 &
+> wait 1
+> flash
+> cho eye=wide look=-2,2
+> sfx drums
+> mark thunder_hook
+> enter raijin 5 from=storm cap="Above the storm" rattle=0 speed=60
+> short 13 start
+> flash
+raijin: It's freezing up there! Something hot!
+kon: Belly buttons!
+> set kon hdy 2 6
+> set mika hdy 2 6
+haru: Belly buttons, Gen-san!
+gen: It's cosplay. Very loud cosplay.
+> card raijin
+raijin>gen: Yours looks delicious.
+> flash
+> set gen hdy 2 4
+gen: ...Not cosplay. NOT COSPLAY. [+0.4]
+> short 13 end
+> serve raijin shoyu
+raijin: Itadakimasu!
+> eat raijin 4 2
+> sfx drums
+haru: Would you sign the wall? Gently.
+> sign raijin
+> leave raijin to=storm
+> finish raijin
+> weather rain
+> wait 1.5
+> chapter The house spirit
+gen: ...If the thunder god was real...
+gen: Then the kappa was real. And Bashō. And Kōmon-sama.
+kon>gen: Welcome, Gen-san.
+> look gen left 5 &
+> short 14 start
+gen: ...And there's a little girl by the window.
+> look zashiki right 4 &
+mika>gen: You can see her now?
+> card zashiki
+gen: Hello there.
+zashiki: Hello, grandpa.
+haru: She's welcome to stay.
+zashiki: I'm staying. This is a good house.
+> short 14 end
+haru: Then sign the wall.
+> sign zashiki
+> wait 1.5
+> chapter Closing
+gen: Haru. Some tea, please. I've had a long night.
+> cook 3
+> wait 1
+haru: Same time next rain, Gen-san?
+gen: ...Same time next rain.
+> cho eye=wink
+> end Next time: the most famous wizard of old Kyoto, | whose mother, they say, was a fox.

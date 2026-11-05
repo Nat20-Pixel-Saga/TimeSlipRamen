@@ -1,0 +1,150 @@
+# Episode 1 · Two Hundred Years Too Early
+# Bashō walks in from 1689; a kappa wants cucumbers. Meet Haru, Kon, Mika and Gen-san.
+@number 1
+@title Two Hundred Years Too Early
+@weather rain
+@music last_bowl paper_lantern
+@present gen:6
+@kasa
+@teaser basho_hook 11
+
+> set gen paper true
+> title
+> cook 3 &
+> wait 5.8
+> word noren 6 &
+> cook 5
+> chapter Opening
+> enter kon 2
+haru: Irasshaimase! ...Oh. It's you, Kon. [w:irasshaimase]
+kon: Tadaima. [w:tadaima]
+haru: Okaeri. [w:okaeri]
+kon>gen: Evening, Gen-san.
+gen>kon: Mm.
+haru: The usual? Extra fried tofu?
+> set kon perk true 2
+kon: Extra extra.
+> serve kon kitsune
+> card kitsune_udon
+kon: Itadakimasu! [w:itadakimasu]
+> eat kon 9 3 &
+> wait 1.5
+> enter mika 1
+haru: Okaeri, Mika.
+mika: Tadaima... It's still raining. Of course it's still raining.
+mika: One miso ramen, please. And a miracle. I have a history mock exam on Monday. [w:moshi]
+haru: Miso ramen I can do.
+> serve mika miso &
+> prop cards seat=1 dx=-13
+mika: "Edo period, 1603 to 1868. Matsuo Bashō, poet, 1644 to 1694..."
+mika: They're just numbers. Nobody in my textbook ever sat down and ate dinner.
+kon>mika: Funny you should say that.
+> wait 2
+> cho eye=wide look=-2,1
+> chapter Bashō
+> enter basho 4 from=edo_road cap="The road north from Edo · 1689"
+> staff basho
+> cho tongue=1 look=1,1
+> mark basho_hook
+haru: Irasshaimase!
+> bow haru &
+basho: Forgive the intrusion. I have walked north from Edo since spring. [w:ojamashimasu]
+> cho tongue=0
+> card basho_journey
+mika: ...Is that Matsuo Bashō? He's on my exam.
+basho>mika: I am on a what?
+> short 1 start
+basho: Is this a soba house? I smell no buckwheat. [w:soba]
+haru: It's a ramen shop.
+basho: Ra... men? [+0.6]
+kon>basho: You're a little early. About two hundred years.
+> card ramen_1910
+gen: Cosplay.
+> short 1 end
+haru: Shoyu ramen. On the house, for travellers.
+> serve basho shoyu
+> hatoff basho
+basho: You are very kind.
+> short 1 start
+> slurp basho
+basho: ...Forgive me. That was loud.
+haru: Slurp away. Here, that means it's good.
+kon>basho: It cools the noodles, too. Slurp louder.
+> slurp basho
+> slurp kon &
+> short 1 end
+basho: I have no coin for a dish that won't exist for two hundred years.
+haru: Then sign the wall. Everyone from far away does. [w:shikishi]
+basho: The wall is empty.
+haru: You'd be the first.
+basho: The first. Then it must be a good one.
+> look basho back 4 &
+> wait 2.5
+basho: Furuike ya... kawazu tobikomu... mizu no oto. [slow] [+1.4]
+mika: The old pond! That one's definitely on my exam.
+basho>mika: That old thing? I wrote it three years ago.
+> card old_pond
+> sign basho
+mika: He wrote it three years ago. For him. [+0.4]
+> finish basho
+basho: Thank you for the noodles from the future.
+> haton basho
+> unstaff basho
+> leave basho to=edo_road
+> bow haru &
+haru: Itterasshai! [w:itterasshai]
+> wait 1
+mika: ...I need a minute.
+kon>mika: Take two. It's still raining.
+> eat mika 6 2 &
+> cook 6
+> chapter Kappa
+> cho eye=wide look=-2,1
+> enter kappa 4 from=river cap="A river, long ago"
+> short 2 start
+haru: Irasshaimase!
+kappa: Cucumber.
+haru: ...Good evening to you too.
+kappa: Sorry. Long swim. Cucumber, please.
+haru: I have cold noodles with cucumber. Not really the season for it. [w:hiyashi]
+kappa: It is always the season for cucumber.
+> short 2 end
+> serve kappa cold
+> sfx crunch &
+> eat kappa 4 1
+> short 2 start
+kon>mika: Whatever you do, don't bow to a kappa.
+mika>kon: Why not? It's polite.
+kappa>mika: Thank you for the noodles, miss.
+> bow mika 1.0 &
+> wait 0.4
+> bow kappa 0.6
+> spill kappa
+kappa: Oh no. [slow]
+> card kappa_dish
+kon>mika: That's why.
+> short 2 end
+haru: Hold still.
+> haru 4
+> refill kappa
+kappa: ...Broth? Even better.
+gen: Cosplay. Good cosplay.
+kappa>gen: What is a cosplay?
+gen>kappa: ...Very good cosplay.
+> card kappamaki
+kappa: I have no coin. Only a cucumber, and I already ate it.
+haru: Then sign the wall.
+> sign kappa
+> leave kappa to=river
+> wait 1
+mika: Two in one night. Is it always like this here?
+kon>mika: Only when it rains.
+haru: My grandfather left me a note about rainy nights.
+mika: What does it say?
+haru: Feed whoever comes in.
+> wait 1.5
+kon: Same time next rain, Haru?
+haru: Same time next rain.
+> cho eye=wink
+> chapter Next time
+> end Next time: a samurai who is always late, | and a tanuki with a score to settle with Kon.

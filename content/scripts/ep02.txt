@@ -1,0 +1,129 @@
+# Episode 2 · The Samurai Who Was Late on Purpose
+# Musashi turns up at closing time; a tanuki challenges Kon, and Kon admits he is 99.
+@number 2
+@title The Samurai Who Was Late on Purpose
+@weather rain
+@music paper_lantern last_bowl
+@present gen:6 kon:2
+@kasa
+@teaser late_hook 11
+
+> set gen paper true
+> title
+> cook 3 &
+> wait 6
+> serve kon kitsune
+kon: Itadakimasu.
+> eat kon 7 2 &
+> chapter Opening
+> enter mika 1
+mika: Tadaima. I got a C on the practice quiz.
+haru: Okaeri. A C isn't an F.
+mika: A C is a polite F.
+kon>mika: Who did you get wrong?
+mika>kon: Every samurai. They all have three names and none of them ever turns up on time.
+> serve mika shoyu &
+> prop cards seat=1 dx=-13
+> wait 2
+> chapter Musashi
+> cho eye=wide look=-2,1
+> enter musashi 4 from=sea cap="Ganryūjima · 1612" speed=36
+> mark late_hook
+> short 3 start
+haru: Irasshaimase! ...We close in five minutes.
+musashi: Then I am right on time. I am always late.
+haru: That's not how time works.
+musashi: It is how duels work. Make the other man wait. He grows angry. Angry men make mistakes.
+> short 3 end
+haru: I'm not your opponent. I'm your cook.
+musashi: ...Then I apologise. Partly.
+> short 3 start
+> card musashi_duel
+mika: Miyamoto Musashi? The duel on the island?
+musashi>mika: You know of it?
+mika>musashi: You're the one samurai I remember.
+musashi>mika: Because I won?
+mika>musashi: Because you were late.
+> short 3 end
+> serve musashi shoyu
+> prop oar seat=4 dx=-2 shavings=1
+musashi: Itadakimasu.
+> eat musashi 5 2
+kon>musashi: Is that an oar?
+musashi>kon: On the boat it was an oar. On the island it was a sword. Tonight it is an oar again.
+gen: Cosplay.
+musashi>haru: What did he say?
+haru: He says your costume is very good.
+musashi: It is not a costume. It is my only shirt.
+> card musashi_book
+mika>musashi: You wrote a whole book? And painted birds?
+musashi: In the end, everything is one way. The sword, the brush, the noodles.
+> slurp musashi
+musashi: ...Mostly the noodles.
+haru: Would you sign the wall?
+> sign musashi
+> unprop oar
+musashi: I will come back. Late.
+> leave musashi to=sea
+> finish musashi
+> clear musashi
+> wait 1.5
+> chapter Tanuki
+> cho eye=wide look=-2,1
+> enter tanuki 5 from=forest cap="The woods at the edge of town"
+> short 4 start
+haru: Irasshaimase!
+tanuki: Good evening! I am a completely normal human customer.
+kon>tanuki: You're a tanuki.
+tanuki>kon: I am a businessman. From the city. With a tail.
+> card tanuki_real
+tanuki>kon: And you're a fox in a coat. At least I make an effort.
+kon>tanuki: I make an effort!
+tanuki>kon: Then turn human. Go on. Show me.
+> short 4 end
+kon: Fine. Watch this.
+> transform kon human_fail 5
+mika>kon: ...Kon, you still have ears.
+tanuki: And a tail! Ha! My turn.
+> wait 1.5
+> short 4 start
+> transform tanuki kettle 7
+> set tanuki wobble 1.0 7
+haru: Oh, good. I needed a kettle.
+> haru 5
+> sfx pour
+> wait 0.8
+tanuki: HOT! Hot hot hot!
+> sfx kettle
+> wait 2.5
+> short 4 end
+tanuki>kon: How old are you, fox?
+kon: ...Ninety-nine.
+tanuki: Ninety-nine! No wonder. No fox gets it right before a hundred.
+> card kitsune_100
+mika>kon: When's your birthday?
+kon>mika: The eleventh of December. Twenty-three days.
+kon: And if I still can't do it by then... maybe the second tail never comes.
+haru>kon: It'll come.
+tanuki>kon: Or it won't! Good luck, fox.
+> serve tanuki shoyu
+tanuki: Itadakimasu!
+> eat tanuki 4 2
+haru>tanuki: Sign the wall before you go.
+> sign tanuki
+> card tanuki_statue
+tanuki: Put a statue of me by your door. I'm very good for business.
+> leave tanuki to=forest
+> finish tanuki
+> wait 1
+gen: Cosplay.
+> wait 0.5
+gen: ...With a real tail. [+0.4]
+> chapter Closing
+mika>kon: Twenty-three days is a long time. You'll get it.
+kon>mika: You'll get your samurai too.
+> wait 1
+haru: Same time next rain?
+kon: Same time next rain.
+> cho eye=wink
+> end Next time: a painter who moved ninety-three times, | an umbrella that wakes up, and a very small samurai.

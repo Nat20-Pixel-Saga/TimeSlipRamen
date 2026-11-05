@@ -1,0 +1,110 @@
+# Episode 4 · Who Ate the First Ramen?
+# Labour Thanksgiving Day. Mitsukuni claims ramen's first slurp; Gen meets his TV hero;
+# Hiraga Gennai brings a slogan and a spark. Mika gets a D.
+@number 4
+@title Who Ate the First Ramen?
+@weather rain
+@music last_bowl night_market
+@present gen:6 kon:2
+@kasa
+@teaser komon_hook 10
+
+> set gen paper true
+> title
+> cook 3 &
+> wait 6
+> chapter Opening
+haru: Today's Labour Thanksgiving Day, so the gyōza are on the house.
+gen: I'm retired.
+haru>gen: Forty-two years of driving a taxi counts.
+> card labor_day
+gen: ...Then I'll have two.
+> enter mika 1
+mika: Tadaima.
+haru: Okaeri. How was the mock exam?
+> prop notebook seat=1 dx=-12
+mika: D. A "D" in history. [w:moshi]
+mika: I can remember 1603. I just can't remember why anyone cared.
+haru: Maybe because you've never had dinner with any of them.
+mika: I've had dinner with three. One of them was a kappa.
+> serve mika miso &
+> wait 2
+> chapter Mitsukuni
+> cho eye=wide look=-2,1
+> enter mitsukuni 4 from=edo_road cap="Mito · 1690s" speed=34
+> staff mitsukuni
+haru: Irasshaimase!
+> short 8 start
+mitsukuni: Ramen, if you please. I am said to be the very first person in Japan who ever ate it.
+> mark komon_hook
+> set gen paper false
+gen: ...Kōmon-sama? Mito Kōmon?
+mitsukuni>gen: People do call me that.
+gen>mitsukuni: I watched you every week for forty years! Show us the crest! The bit at the end with the crest!
+mitsukuni>gen: What is a "week"? What is "watched"?
+> card mito_komon
+> short 8 end
+mika>mitsukuni: The first ramen in Japan, though? I read that's not really...
+> short 8 start
+> card mitsukuni_ramen
+mitsukuni>mika: Hmph. A legend is a legend, young lady.
+> short 8 end
+> serve mitsukuni shoyu
+> slurp mitsukuni
+mitsukuni: ...Then I shall be the first to eat this one.
+gen: Can I have your autograph? On my newspaper?
+haru: He'll sign the wall, Gen-san.
+> sign mitsukuni
+gen: ...I'll take a photo of the wall.
+> unstaff mitsukuni
+> leave mitsukuni to=edo_road
+> finish mitsukuni
+> clear mitsukuni
+> wait 1
+mika: Gen-san. You know he's not an actor, right?
+gen: Best cosplay I've ever seen.
+> wait 1.5
+> chapter Gennai
+> cho eye=wide look=-2,1
+> enter gennai 4 from=edo_town cap="Edo · 1776"
+haru: Irasshaimase!
+> short 9 start
+gennai: Good evening! Quiet in here. Business slow on a Monday?
+haru: ...A little.
+gennai: You need a slogan. I once helped an eel shop that couldn't sell eel in summer.
+> card gennai_eel
+gennai: For you... "When it rains, eat ramen."
+haru: It's already raining.
+gennai: Then the sign is true! The best kind.
+> short 9 end
+> serve gennai shoyu
+> prop elekiter seat=4 dx=-14
+gennai: And for your customers, a little entertainment. Who wants to feel a spark?
+gen: Not me.
+> short 9 start
+> unprop elekiter
+> prop elekiter seat=4 dx=-14 crank=1 spark=1 dur=2.5
+> sfx zap
+> wait 0.6
+gen: AAH!
+> prop elekiter seat=4 dx=-14
+> card elekiter
+> short 9 end
+gennai>mika: You look like someone who's failed an exam.
+mika>gennai: ...A mock exam. In history.
+gennai>mika: I failed at half the things I tried. History only remembers the other half.
+> eat gennai 4 2
+haru: Would you sign the wall?
+> sign gennai
+> unprop elekiter
+> leave gennai to=edo_town
+> finish gennai
+> wait 1
+> chapter Closing
+kon>mika: He's right, you know.
+mika>kon: About the eels?
+kon>mika: About the failing.
+> wait 1
+haru: Same time next rain.
+> cho eye=wink
+> end Next time: a dog who waits at the station, | and a fisherman who's been gone a little longer than he thinks.

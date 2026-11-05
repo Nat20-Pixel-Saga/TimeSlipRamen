@@ -1,0 +1,101 @@
+# Episode 11 · The Dream Eater
+# Mika falls asleep studying and a baku eats her nightmare; Hattori Hanzō insists he is
+# not a ninja, then hides Kon's birthday decorations.
+@number 11
+@title The Dream Eater
+@weather snow
+@music snow_noren last_bowl
+@present gen:6 kon:2 mika:1
+@kasa
+@zashiki
+@teaser dream_hook 10
+
+> prop notebook seat=1 dx=-12
+> prop plum seat=1 dx=-4
+> title
+> cook 3 &
+> wait 6
+> chapter Opening
+kon: Two days.
+> transform kon human_fail 4
+gen: Closer. One ear.
+kon: There are still two ears.
+gen: One and a half.
+> serve kon kitsune &
+> wait 2
+mika: I'm just going to rest my eyes for one minute...
+> set mika hdy 6 1e9
+> wait 3
+> chapter The dream eater
+> prop bubble x=136 y=70 k=1.0
+> sfx sparkle
+kon: ...She's having a nightmare.
+haru: It's an exam. With a big red "F".
+> cho eye=wide look=-2,1
+> enter baku x:96 from=dream cap="The land of dreams" speed=24
+> mark dream_hook
+> short 24 start
+kon: Is that... an elephant?
+gen: A tapir?
+haru: A baku.
+> card baku
+> set baku reach 1.0 4
+> unprop bubble
+> prop bubble x=136 y=70 shrink=0
+> sfx slurp
+> wait 1.6
+> sfx crunch
+> unprop bubble
+baku: Mm. Exam dreams. Crunchy.
+> short 24 end
+> set mika hdy 0 1e9
+mika: ...I dreamed about... nothing. I feel great!
+> short 24 start
+baku>mika: You're welcome.
+mika: ...There's a baku in the shop.
+haru: There's a baku in the shop.
+> short 24 end
+haru: Would you sign the wall?
+> sign baku
+baku: Call me if the exams come back.
+> leave baku to=dream
+> wait 1.5
+> chapter Hanzō
+kon: I'm going out to practise. One more time.
+> leave kon
+> wait 1
+haru: Quick. The decorations. Where do we hide them?
+> appear hanzo x:300
+> short 25 start
+hanzo: Allow me.
+gen: GAH! A ninja!
+hanzo: I am a samurai.
+mika: You're dressed all in black. You appeared out of nowhere.
+hanzo: Black is practical. Nowhere is where I was standing.
+> card hanzo
+gen: There's a subway line named after you!
+hanzo: ...I know. I don't understand it either.
+> short 25 end
+haru: Can you hide these until Friday night?
+> sfx whoosh
+> wait 1
+hanzo: Done.
+haru: ...Where are they?
+hanzo: That is the point.
+> sitdown hanzo 4
+> serve hanzo shoyu
+> eat hanzo 4 2
+haru: Would you sign the wall?
+> sign hanzo
+> leave hanzo to=edo_castle
+> finish hanzo
+> wait 1.5
+> chapter Closing
+> enter kon 2
+kon: Tadaima! ...Why does it smell like a secret in here?
+haru: It smells like miso.
+kon: Two days.
+> wait 1
+haru: Same time next snow.
+> cho eye=wink
+> end Next time, the season finale: forty-seven bowls to go, | a very special guest, and Kon turns one hundred.

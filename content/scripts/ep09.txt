@@ -1,0 +1,109 @@
+# Episode 9 · The People on Your Money
+# Shibusawa Eiichi, Tsuda Umeko and Kitasato Shibasaburō come in together; Gen-san pays
+# with new banknotes. The regulars start planning Kon's birthday in secret.
+@number 9
+@title The People on Your Money
+@weather rain
+@music night_market last_bowl
+@present gen:6 kon:2 mika:1
+@kasa
+@zashiki
+@teaser money_hook 10
+
+> prop notebook seat=1 dx=-12
+> title
+> cook 3 &
+> wait 6
+> chapter Opening
+kon: I'm going out to practise in the rain. Save me some tofu.
+> leave kon
+> wait 1
+haru: He's gone. Quick. The birthday.
+mika: Cake?
+gen: Fried tofu cake.
+haru: ...Is that a thing?
+gen: It is now.
+> wait 1.5
+> chapter Three visitors
+> cho eye=wide look=-2,1
+> establish meiji "Tokyo · Meiji era"
+> wait 0.3
+> enter shibusawa 3 from=meiji &
+> wait 1.3
+> enter tsuda 4 from=meiji rattle=0 &
+> wait 1.3
+> enter kitasato 5 from=meiji rattle=0
+haru: Irasshaimase!
+shibusawa: Three, please. We were walking home from a meeting.
+kitasato: Before anything, may I see your kitchen?
+haru: ...My kitchen?
+kitasato: Old habit. I'm a doctor.
+> haru 5
+> wait 2
+kitasato: Clean. Very clean. I approve.
+> serve shibusawa shoyu
+> serve tsuda shoyu
+> serve kitasato shoyu
+> eat shibusawa 5 2 &
+> eat tsuda 5 1 &
+> eat kitasato 5 2
+shibusawa: Wonderful. How much do we owe you?
+> mark money_hook
+> short 19 start
+gen: Let me get this one.
+> prop paper seat=6 dx=-14
+gen>shibusawa: Ten thousand yen. One of the new notes. [w:yen]
+shibusawa: ...Is that me?
+gen>shibusawa: It's you.
+shibusawa: Why am I on money?
+> card new_notes
+> short 19 end
+> short 20 start
+tsuda>gen: Is there a five thousand?
+gen>tsuda: There's you.
+tsuda: Oh my.
+> short 20 end
+> short 21 start
+kitasato>gen: And the thousand?
+gen>kitasato: You.
+kitasato: ...Has it been washed?
+> short 21 end
+> unprop paper
+> short 19 start
+> card shibusawa
+shibusawa: Five hundred companies? I only remember about three hundred.
+> short 19 end
+> short 20 start
+mika>tsuda: Excuse me... why are you on money?
+tsuda>mika: I went to America when I was six, to study. Later, I opened a school for women.
+> card tsuda
+mika>tsuda: Six? Alone?
+tsuda>mika: With four other girls. I was the smallest. You're eighteen. You'll be fine.
+> short 20 end
+> short 21 start
+> card kitasato
+kitasato>haru: Wash your hands, keep the broth boiling, and you'll outlive us all.
+> short 21 end
+haru: Would you all sign the wall?
+> sign shibusawa
+> sign tsuda
+> sign kitasato
+> leave kitasato to=meiji
+> leave tsuda to=meiji
+> leave shibusawa to=meiji
+> finish shibusawa
+> finish tsuda
+> finish kitasato
+> wait 1.5
+> chapter Closing
+> enter kon 2
+kon: Tadaima! ...Why is everyone so quiet?
+mika: No reason.
+gen: Cake.
+haru: Gen-san!
+gen: ...Lake. I said lake. [+0.4]
+kon: Seven days.
+> wait 1
+haru: Same time next rain.
+> cho eye=wink
+> end Next time: the first snow, a woman made of winter, | and the god students pray to before exams.

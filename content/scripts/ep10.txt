@@ -1,0 +1,96 @@
+# Episode 10 · The Snow Woman Wants It Cold
+# First snow. Yuki-onna freezes everything she breathes on; Sugawara no Michizane, god of
+# learning, has advice for Mika's exams.
+@number 10
+@title The Snow Woman Wants It Cold
+@weather snow
+@music snow_noren paper_lantern
+@present gen:6 kon:2 mika:1
+@kasa
+@zashiki
+@teaser yuki_hook 10
+
+> prop notebook seat=1 dx=-12
+> title
+> cook 3 &
+> wait 6
+> chapter Opening
+mika: It's snowing! First snow! [w:hatsuyuki]
+gen: Snow means the door gets interesting.
+kon: Four days.
+> serve kon kitsune &
+> serve gen shoyu &
+> wait 5
+> chapter Yuki-onna
+> cho eye=wide look=-2,1
+> enter yuki 3 from=snow_mtn cap="A mountain pass, in a blizzard" speed=26
+> sfx wind
+> light 190 110 40 0.25,0.35,0.6 0.5 60
+haru: Irasshaimase!
+> mark yuki_hook
+> short 22 start
+yuki: Something cold, please.
+haru: It's snowing outside.
+yuki: Colder.
+> serve yuki frozen
+haru: Cold noodles. On ice.
+yuki: ...It's still a little warm.
+> sfx wind
+> finish yuki frozen
+yuki: There. Perfect.
+> card yuki
+> short 22 end
+> eat yuki 5 1
+> short 22 start
+gen>yuki: Here. Take my stool, it's further from the stove.
+yuki>gen: You're not afraid of me?
+gen>yuki: Last week a thunder god asked for my belly button. You're fine.
+> prop cup seat=6 dx=-14 frozen=1
+> sfx wind
+gen: ...My tea's frozen.
+yuki: Sorry.
+> short 22 end
+haru: Would you sign the wall?
+> sign yuki
+> leave yuki to=snow_mtn
+> finish yuki
+> wait 1.5
+> chapter Michizane
+> cho eye=wide look=-2,1
+> enter michizane 4 from=plum cap="Kyoto · 901" speed=30
+> prop plum seat=4 dx=-12
+haru: Irasshaimase!
+> short 23 start
+mika>michizane: ...Excuse me. Are you Sugawara no Michizane? The god of learning?
+michizane>mika: The god of what?
+> card michizane
+mika>michizane: Please. My entrance exams are in January. Can you give me luck? [w:juken]
+michizane>mika: Luck is the last ingredient. Study is the first.
+mika>michizane: ...I have a notebook. "People, not dates."
+> wait 1.5
+michizane>mika: Then you're already doing the hard part.
+> short 23 end
+> card common_test
+> serve michizane shoyu
+michizane: Itadakimasu.
+> eat michizane 4 2
+michizane: I am leaving Kyoto tomorrow, for a long time. I wrote a poem to my plum tree.
+haru: What did it say?
+michizane: When the east wind blows, send me your scent. [slow]
+> card tobiume
+michizane>mika: Keep the branch. For your exams.
+haru: Would you sign the wall?
+> sign michizane
+> leave michizane to=plum
+> finish michizane
+> wait 1.5
+> chapter Closing
+kon: Four days.
+gen>haru: What's the plan for the... lake?
+haru>gen: Shh.
+kon: What lake?
+mika: No lake.
+> wait 1
+haru: Same time next snow.
+> cho eye=wink
+> end Next time: Mika's worst nightmare, a creature that eats dreams, | and a samurai who is NOT a ninja.

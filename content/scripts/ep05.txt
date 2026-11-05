@@ -1,0 +1,103 @@
+# Episode 5 · The Dog Who Waited
+# Hachikō comes in out of the rain and Gen-san softens; Urashima Tarō has been away "three days".
+@number 5
+@title The Dog Who Waited
+@weather rain
+@music paper_lantern last_bowl
+@present gen:6 kon:2 mika:1
+@kasa
+@teaser box_hook 10
+
+> set gen paper true
+> prop notebook seat=1 dx=-12
+> title
+> cook 3 &
+> wait 6
+> chapter Opening
+kon: Sixteen days.
+mika>kon: Until your birthday?
+kon>mika: Until I'm a hundred. What if I wait all that time and nothing happens?
+haru>kon: Then you'll still be here, with a bowl of noodles.
+> serve kon kitsune &
+> wait 3
+> chapter Hachikō
+> cho eye=wide look=-2,1
+> enter hachiko floor:82 from=shibuya cap="Shibuya Station · 1930s"
+> short 10 start
+mika: A dog!
+haru: Irasshaimase... to you too.
+> sfx bark
+gen: That's... that looks just like Hachikō.
+kon>gen: Gen-san. It is Hachikō.
+> card hachiko
+> short 10 end
+haru: No onions and no salt for dogs. Plain chicken, and water.
+> serve floor:96 shoyu
+> sfx bowl_soft
+> set gen paper false
+> short 10 start
+gen: I drove a taxi past Shibuya Station every day for forty-two years.
+gen: I used to say hello to your statue.
+> card hachiko_statue
+> look gen left 6 &
+gen: ...Rain in my eyes. That's all. [+0.6]
+> short 10 end
+> wait 2
+mika>gen: Who's he waiting for?
+gen>mika: His professor. Every evening.
+> wait 2
+haru: A paw for the wall?
+> sign hachiko
+> sfx chime
+> wait 1
+> leave hachiko to=shibuya
+> clear floor:96
+> wait 2
+mika: He's going to keep waiting, isn't he?
+haru: Every evening.
+> wait 2
+> chapter Urashima Tarō
+> cho eye=wide look=-2,1
+> enter urashima 4 from=sea cap="The sea, long ago"
+haru: Irasshaimase!
+> short 11 start
+urashima: Excuse me. I've been away three days. I can't find my village.
+mika>urashima: Three days? What year do you think it is?
+urashima>mika: What year is it?
+mika>urashima: 2026.
+urashima: ...Is that a lot of years?
+kon>urashima: A lot.
+> card urashima
+> short 11 end
+> prop box seat=4 dx=-12
+haru: Sit. Eat something warm first.
+> serve urashima shoyu
+urashima: The princess under the sea gave me a box. She said never to open it.
+> mark box_hook
+> short 11 start
+urashima: But surely just a little peek...
+> prop box seat=4 dx=-12 opening=1 dur=0.6
+kon: NO!
+mika: Don't open the box!
+gen: Don't open the box!
+> unprop box
+> prop box seat=4 dx=-12
+> card urashima_box
+urashima: ...I'll leave it closed.
+> short 11 end
+> eat urashima 4 2
+haru: Will you sign the wall?
+> sign urashima
+urashima: If I come back, will you still be here?
+haru: Every rainy night.
+> unprop box
+> leave urashima to=sea
+> finish urashima
+> wait 1.5
+> chapter Closing
+kon: A dog who waited ten years. A man who was gone three hundred.
+kon: Sixteen days doesn't sound so long.
+> wait 1
+haru: Same time next rain.
+> cho eye=wink
+> end Next time: a princess from the Moon, a god of thunder, | and Gen-san finally stops saying "cosplay".

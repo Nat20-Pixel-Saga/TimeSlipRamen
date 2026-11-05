@@ -1,0 +1,139 @@
+# Episode 12 · Forty-Seven Bowls (season finale)
+# Ōishi Kuranosuke orders 47 bowls to go. Kon turns one hundred: his grandmother arrives,
+# Okuni dances, a second tail appears, Mika gets her result, and Chō says her first word.
+@number 12
+@title Forty-Seven Bowls
+@weather snow
+@music night_market snow_noren last_bowl
+@present gen:6 mika:1
+@kasa
+@zashiki
+@teaser bowls_hook 11
+@endhead SEE YOU NEXT SEASON
+
+> prop notebook seat=1 dx=-12
+> prop plum seat=1 dx=-4
+> title
+> cook 3 &
+> wait 6
+> chapter Opening
+mika: Is everything ready?
+haru: Hanzō hid the decorations. Nobody can find them.
+gen: I found one. In my hat.
+> enter kon 2
+kon: Tadaima.
+haru: Okaeri, Kon.
+mika: Evening, Kon.
+gen: Mm.
+kon: ...Nobody has anything to say?
+haru: The usual?
+kon: ...The usual. [+0.6]
+> serve kon kitsune
+> eat kon 5 2 &
+> wait 2
+> chapter Ōishi Kuranosuke
+> cho eye=wide look=-2,1
+> enter oishi 4 from=edo_castle cap="Edo · winter, 1703" speed=34
+haru: Irasshaimase!
+> mark bowls_hook
+> short 26 start
+oishi: Forty-seven bowls, please. To go.
+haru: ...Forty-seven?
+oishi: For some friends. We have a long night ahead of us.
+mika>oishi: What kind of night?
+oishi>mika: A quiet one. I hope.
+> card ronin
+> short 26 end
+> haru 6
+> cook 3
+> prop stack x=150 rate=6 n=47 dur=1e9
+> short 26 start
+> cook 7
+haru: Forty-five... forty-six... forty-seven.
+oishi: Thank you. They will be grateful.
+> short 26 end
+> card chushingura
+haru: Would you sign the wall?
+> sign oishi
+oishi: All forty-seven of us. It's crowded.
+gen: That's going to need a bigger wall.
+> leave oishi to=edo_castle
+> unprop stack
+> wait 1.5
+> chapter A visitor for Kon
+> cho eye=wide look=-2,1
+> enter grandma 3 from=shrine cap="An Inari shrine, in the snow" speed=26
+haru: Irasshaimase!
+> short 27 start
+kon: ...Obāchan? [w:obaachan]
+grandma>kon: Happy birthday, little one.
+kon>grandma: You came all this way?
+grandma>kon: One hundred years only happens once.
+> prop party
+> sfx cracker
+mika: SURPRISE!
+gen: Happy birthday!
+haru: Happy hundredth, Kon. [w:tanjoubi]
+kon: ...You remembered.
+gen: We hid the decorations with a samurai.
+> short 27 end
+> serve grandma kitsune
+grandma>kon: Have you learned to take human form?
+kon>grandma: ...No. I tried every night. Ears. Every time.
+grandma>kon: And what else did you do, every night?
+kon>grandma: ...Sat here. Talked to whoever came in. Helped Haru.
+grandma>kon: Then you have been a good fox.
+> wait 1.5
+> short 27 start
+> sfx sparkle
+> set kon tails 2 1e9
+> transform kon none
+> wait 1.2
+mika: Kon... look behind you.
+kon: ...Two tails. TWO TAILS! [w:yatta]
+> card kitsune_100
+> short 27 end
+> transform kon human 5
+grandma: And there's your human face. Don't wear it too often.
+kon: I think I like my ears.
+> wait 1
+haru: Would you sign the wall?
+> sign grandma
+> chapter Okuni
+> cho eye=wide look=-2,1
+> enter okuni x:80 from=kyoto_river cap="Kyoto · 1603"
+haru: Irasshaimase!
+> short 28 start
+okuni: I heard there was a party. I've brought a dance.
+> dance okuni 80 9 &
+> wait 2
+> card okuni
+mika>okuni: You started kabuki!
+okuni>mika: I started something. They named it after me leaning over too far. [w:kabuki]
+> short 28 end
+> wait 1
+haru: Would you sign the wall?
+> sign okuni
+> leave okuni to=kyoto_river
+> leave grandma to=shrine
+> finish grandma
+> wait 1.5
+> chapter Closing
+mika: Oh! I almost forgot. My mock exam came back.
+haru: And?
+> prop cards seat=1 dx=-13
+mika: History... A. An A! [w:yatta]
+gen: Ha!
+kon: Two tails and an A.
+gen: And I'm on bowls now. Officially.
+> wait 1.5
+> cho eye=open look=-1,1
+> wait 1
+cho: ...Irasshai!
+> wait 1
+mika: Did the lantern just talk?
+kon: She's a hundred too, you know.
+> wait 1.5
+haru: Same time next rain, everyone.
+> cho eye=wink
+> end That's the end of Season 1. | Thank you for eating with us. | Same time next rain.
